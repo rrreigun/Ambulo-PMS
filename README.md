@@ -43,7 +43,7 @@ This project was developed by a collaborative team of 4 developers:
 | Name | Role | Contributions | GitHub | LinkedIn |
 |------|------|---------------|--------|----------|
 | **Kei Lebron** | Project Manager & Backend Developer | Project coordination, server-side logic, database architecture | [@keilebron](https://github.com/kklebron) | [LinkedIn](https://linkedin.com/in/kei-lebron) |
-| **Rea Buena** | Lead Programmer | Server-side logic, database operations, API endpoints, Full-stack | [@rrreigun](https://github.com/rrreigun) | [LinkedIn](https://www.linkedin.com/in/reana-buena/) |
+| **Rea Buena** | Lead Programmer | Server-side logic, database operations, API endpoints, Full-stack | [@rrreigun](https://github.com/rrreigun) | [LinkedIn](https://www.linkedin.com/in/rea-buena/) |
 | **Joshua Deputo** | Frontend Developer | User interface implementation, client-side functionality, responsive layouts | [@joshuadeputo](https://github.com/joshuadeputo) | N/A |
 | **Jerson Matuguina** | UI/UX Designer | Web design, user experience | [@jersonmatuguina](https://github.com/jersonmatuguina) | N/A |
 
@@ -82,50 +82,38 @@ The API runs at **`http://localhost:5000/api/v1`** (configurable)
 Create **`.env`** files in both `server` and `client` (if needed). Example for **server/.env**:
 
 ```env
+#LOCAL SETUP
 NODE_ENV="development"
 PORT=5000
 API_VERSION=v1
 PROJECT_NAME="AmbuloPMS"
 JWT_SECRET=your_jwt_secret
-MY_SQL_HOST="localhost"
-MY_SQL_USER="your_mysql_user"
-MY_SQL_PASSWORD="your_mysql_password"
-MY_SQL_DATABASE="your_database_name"
-COOKIE_DOMAIN="localhost"
+MY_SQL_HOST_LOCAL="localhost"
+MY_SQL_USER_LOCAL="your_mysql_user"
+MY_SQL_PASSWORD_LOCAL="your_mysql_password"
+MY_SQL_DATABASE_LOCAL="your_database_name"
+COOKIE_DOMAIN_LOCAL="localhost"
+API_BASE_LOCAL="your_localhost_url"
+FORCE_FIRST_LOGIN_RESET="true"
 
+#FILE UPLOAD
 CLOUDINARY_CLOUD_NAME="your_cloudinary_cloud_name"
 CLOUDINARY_API_KEY="your_cloudinary_api_key"
 CLOUDINARY_API_SECRET="your_cloudinary_api_secret"
+
+#EMAIL FUNCTION
+GMAIL_USER="youremail@gmail.com"
+GMAIL_PASSWORD="your_gmail_password"
+MAIL_FROM_NAME="Ambulo Properties"
+MAIL_FROM="youremail@gmail.com"
+MAIL_REPLY_TO="youremail@gmail.com"
+
+#CHATBOT
+BP_ASSISTANT_BACKEND="gemini"
+GOOGLE_API_KEY="your_gemini_api_key"
+GEMINI_MODEL="gemini-2.0-flash"
+ASSISTANT_SHOW_MODEL_TAG="true"
 ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
-
-<!-- PROJECT ROADMAP -->
-## Project Roadmap
-
-**Week 1**(June 17) - **Week 2** (June 28)
- 
-**FRONT-END**
-- [x] Login
-- [x] Home Page 
-- [x] Admin Dashboard
-- [x] User Dashboard
-- [x] Maintenance Ticketing - Admin side
-- [x] Maintenance Request - user side
-- [x] Inbox - send/received messages
-
-**BACK-END**
-- [x] Users
-- [x] Properties 
-- [x] Maintenance Ticketing
-- [ ] Messages
-- [ ] Service Providers
-- [ ] Reports
-- [ ] Chatbot
-
-See the [open issues](https://github.com/RankFour/AmbuloProperties/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
